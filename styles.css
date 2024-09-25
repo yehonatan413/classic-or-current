@@ -124,7 +124,7 @@ audio {
 }
 
 .album-cover-text-mobile {
-    display: none;
+    visibility: hidden;
 }
 
 .btn-audio {
@@ -238,6 +238,16 @@ audio {
     .answers-container {
         flex-direction: column;
         width: 50%;
+    }
+
+    .btn-classic:hover {
+        background-color: var(--dark-gray-color);
+        color: var(--classic-color);
+    }
+
+    .btn-current:hover {
+        background-color: var(--dark-gray-color);
+        color: var(--current-color);
     }
 
     .album-cover-container {

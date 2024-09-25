@@ -132,7 +132,7 @@ function updateScore(amount) {
     };
 }
 async function fetchSongList() {
-    const response = await fetch("/MusicDB.json");
+    const response = await fetch("./MusicDB.json");
     const jsonList = await response.json();
     return jsonList;
 }

@@ -1,0 +1,293 @@
+:root {
+    --classic-color: rgb(255, 204, 102);
+    --current-color: rgb(153, 204, 204);
+    --dark-gray-color: #111112;
+}
+
+@font-face {
+    font-family: "Bradley Gratis";
+    src: url("fonts/Bradley\ Gratis.ttf");
+}
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("fonts/CoolveticaRg-Regular.ttf");
+}
+
+.hidden {
+    display: none !important;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Coolvetica";
+    background-color: var(--dark-gray-color);
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 40%;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    background: none;
+    font-size: 40pt;
+    cursor: pointer;
+    padding: 0.1rem 1rem;
+    transition: background-color 0.2s, color 0.5s;
+}
+
+audio {
+    margin-block: 2rem;
+}
+
+.logo {
+    margin-block: -3rem;
+}
+
+.desc {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    max-width: 40%;
+}
+
+.btn-start {
+    font-family: "Coolvetica";
+    font-size: 3rem;
+    color: white;
+}
+
+.btn-start:hover {
+    background-color: white;
+    color: var(--dark-gray-color);
+}
+
+.score {
+    font-size: 3rem;
+    margin: 2rem;
+    color: white;
+}
+
+.round {
+    margin-top: 5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.album-cover-container {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    min-width: 10%;
+    max-width: 50%;
+    margin-inline: 3rem;
+}
+
+.album-cover {
+    width: 100%;
+}
+
+.album-cover-overlay {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.63);
+    font-size: 24pt;
+    line-height: 24rem;
+    opacity: 0;
+    transition: opacity 0.1s;
+    cursor: pointer;
+}
+
+.album-cover-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.album-cover-text-mobile {
+    display: none;
+}
+
+.btn-audio {
+    cursor: pointer;
+}
+
+.answers-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn-classic {
+    font-family: "Bradley Gratis";
+    color: var(--classic-color);
+}
+
+.btn-classic:hover {
+    background-color: var(--classic-color);
+    color: black;
+}
+
+.btn-current {
+    font-family: "Coolvetica";
+    color: var(--current-color);
+    font-size: 35pt;
+}
+
+.btn-current:hover {
+    background-color: var(--current-color);
+    color: black;
+}
+
+.resultList-container {
+    width: 100%;
+    display: grid;
+    overflow: scroll;
+    max-height: calc(100vh - 14rem);
+    scrollbar-width: none;
+}
+
+.resultList-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--current-color);
+    border-radius: 10px;
+    padding-inline: 1.5rem;
+    margin-block: 1rem;
+}
+
+.resultList-info-container {
+    margin-right: 0.75rem;
+}
+
+.album {
+    margin-left: auto;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.artist {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.song {
+    font-size: 1.5rem;
+}
+
+.resultList-album-cover {
+    width: 5rem;
+    padding: 1rem;
+}
+
+.btn-play-again {
+    font-family: "Coolvetica";
+    color: white;
+    margin: 1rem;
+}
+
+.btn-play-again:hover {
+    background-color: white;
+    color: var(--dark-gray-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 12rem;
+    }
+
+    .desc {
+        font-size: 1.5rem;
+        max-width: 80%;
+    }
+
+    .btn-start {
+        font-size: 2rem;
+    }
+
+    .score {
+        font-size: 2.5rem;
+    }
+
+    .btn-audio {
+        width: 4rem;
+    }
+
+    .answers-container {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .album-cover-container {
+        max-width: 60%;
+        margin-block: 0;
+    }
+
+    .album-cover-overlay {
+        line-height: 15rem;
+        font-size: 18pt;
+    }
+
+    .album-cover-text-mobile {
+        visibility: visible;
+        color: white;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 1rem;
+        pointer-events: none;
+    }
+
+    .resultList-item {
+        padding-inline: 0.5rem;
+        margin-block: 0.6rem;
+    }
+
+    .song {
+        font-size: 1rem;
+    }
+
+    .artist {
+        font-size: 0.9rem;
+    }
+    .album {
+        font-size: 1rem;
+    }
+
+    .resultList-album-cover {
+        width: 3.5rem;
+        padding: 0.75rem;
+    }
+
+    .btn-play-again {
+        font-size: 30pt;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .album-cover-container {
+        max-width: 95%;
+    }
+}

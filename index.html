@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <title>Classic or Current</title>
+    </head>
+    <body>
+        <main>
+            <img class="logo" src="img/logo.png" alt="logo" />
+            <p class="desc">
+                Put your ears to the test! <br /><br />
+                See if you can differentiate between the songs recorded during
+                the "golden age" of metal, and the ones recorded in the last
+                couple of years.
+            </p>
+            <button class="btn-start">Play!</button>
+            <span class="score hidden">0</span>
+            <div class="album-cover-container hidden">
+                <img
+                    class="album-cover hidden"
+                    src="img/album-cover-unknown.png"
+                    alt="Imgage"
+                />
+                <div class="album-cover-overlay hidden">
+                    <span class="album-cover-text"
+                        >Reveal album cover <br />
+                        (-50 pts)</span
+                    >
+                </div>
+                <span class="album-cover-text-mobile hidden"
+                    >Tap to reveal album cover <br />
+                    (-50 pts)</span
+                >
+            </div>
+            <audio class="hidden" loop="" src=""></audio>
+            <img class="btn-audio hidden" src="img/pause.png" alt="" />
+            <div class="answers-container hidden">
+                <button class="btn-answer btn-classic hidden">classic</button>
+                <button class="btn-answer btn-current hidden">current</button>
+            </div>
+            <span class="round hidden">0/10</span>
+            <div class="resultList-container hidden"></div>
+            <button class="btn-play-again hidden">Play Again</button>
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>
